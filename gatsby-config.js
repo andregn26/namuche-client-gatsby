@@ -6,10 +6,17 @@
 
 /**
  * @type {import('gatsby').GatsbyConfig}
+ * 
  */
+
+
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
-    title: `My gatsby/wordpress website`,
+    title: `Namuche Digital`,
     description: `Making Brands Happening`,
     author: `@namuche`,
   },
@@ -21,7 +28,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/assets/images`,
       },
     },
 
