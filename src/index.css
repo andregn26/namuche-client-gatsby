@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300;1,400&family=Oswald:wght@500;700&display=swap");
+
+:root {
+  --ff-body: "Lato", sans-serif;
+  --ff-heading: "Oswald", sans-serif;
+}
+
+/* Fluid font size variables, for browsers that support clamp */
+@supports (font-size: clamp(1rem, 1vw, 1rem)) {
+  :root {
+    --fs-xs: clamp(0.69rem, 0.12vw + 0.66rem, 0.76rem);
+    --fs-sm: clamp(0.83rem, 0.21vw + 0.78rem, 0.95rem);
+    --fs-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+    --fs-md: clamp(1.2rem, 0.52vw + 1.07rem, 1.48rem);
+    --fs-lg: clamp(1.44rem, 0.76vw + 1.25rem, 1.86rem);
+    --fs-xl: clamp(1.73rem, 1.08vw + 1.46rem, 2.32rem);
+    --fs-xxl: clamp(2.07rem, 1.5vw + 1.7rem, 2.9rem);
+    --fs-xxxl: clamp(2.49rem, 2.06vw + 1.97rem, 3.62rem);
+    --fs-4xl: clamp(2.99rem, 2.81vw + 2.28rem, 4.53rem);
+    --fs-5xl: clamp(3.58rem, 3.78vw + 2.64rem, 5.66rem);
+    --fs-6xl: clamp(4.3rem, 5.05vw + 3.04rem, 7.08rem);
+  }
+}
+/* Fallback variables for browsers that don't support clamp */
+@supports not (font-size: clamp(1rem, 1vw, 1rem)) {
+  :root {
+    --fs-xs: 0.69rem;
+    --fs-sm: 0.83rem;
+    --fs-base: 1rem;
+    --fs-md: 1.2rem;
+    --fs-lg: 1.44rem;
+    --fs-xl: 1.73rem;
+    --fs-xxl: 2.07rem;
+    --fs-xxxl: 2.49rem;
+    --fs-4xl: 2.99rem;
+    --fs-5xl: 3.58rem;
+    --fs-6xl: 4.3rem;
+  }
+  @media screen and (min-width: 1280px) {
+    :root {
+      --fs-xs: 0.76rem;
+      --fs-sm: 0.95rem;
+      --fs-base: 1.19rem;
+      --fs-md: 1.48rem;
+      --fs-lg: 1.86rem;
+      --fs-xl: 2.32rem;
+      --fs-xxl: 2.9rem;
+      --fs-xxxl: 3.62rem;
+      --fs-4xl: 4.53rem;
+      --fs-5xl: 5.66rem;
+      --fs-6xl: 7.08rem;
+    }
+  }
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+  font-size: 1rem;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+  font-size: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"],
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Set core body defaults */
+body {
+  position: relative;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.hero-backgroundImg {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-backgroundImg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url(./assets/img/banner-1.png);
+  filter: brightness(20%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+.hero-backgroundImg-inside {
+  /* This will make it stack on top of the ::before */
+  position: relative;
+}
+
+::selection {
+  background: #ff4200;
+}
+
+.css-ksy4gi-MuiButtonBase-root-MuiIconButton-root {
+  color: #ffffff !important;
+}
