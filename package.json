@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "gatsby-wordpress-starter",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A simple starter to get up and developing quickly with Gatsby and Wordpress",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "andregn26",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
@@ -14,7 +14,9 @@
     "gatsby-plugin-manifest": "^5.8.0",
     "gatsby-plugin-sharp": "^5.8.1",
     "gatsby-source-filesystem": "^5.8.0",
+    "gatsby-source-wordpress": "^7.8.0",
     "gatsby-transformer-sharp": "^5.8.0",
+    "html-react-parser": "^3.0.15",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

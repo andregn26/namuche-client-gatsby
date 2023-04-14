@@ -9,10 +9,9 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Namuche Digital`,
+    title: `My gatsby/wordpress website`,
     description: `Making Brands Happening`,
     author: `@namuche`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
     `gatsby-plugin-image`,
