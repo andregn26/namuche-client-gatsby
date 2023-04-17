@@ -4,20 +4,11 @@ import {
   Divider,
   Drawer,
   IconButton,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
   Typography,
   useTheme,
 } from "@mui/material"
-import { SettingsOutlined, ChevronRight } from "@mui/icons-material"
+import { ChevronRight } from "@mui/icons-material"
 import FlexBetween from "../../../components/HelpersComponents/Flex/FlexBetween"
-import WhatsAppIcon from "@mui/icons-material/WhatsApp"
-import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined"
-import InstagramIcon from "@mui/icons-material/Instagram"
-import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined"
 import MainMenu from "../MainMenu/MainMenu"
 // import SocialIconsGroup from "../../00Layout/SocialIcons/SocialIconsGroup"
 

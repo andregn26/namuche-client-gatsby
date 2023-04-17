@@ -4,6 +4,7 @@ import Toolbar from "@mui/material/Toolbar"
 import useScrollTrigger from "@mui/material/useScrollTrigger"
 import WidthCenterContainer from "../../../components/HelpersComponents/Containers/WidthCenterContainer"
 import MainMenu from "../MainMenu/MainMenu"
+import Navigation from "../../../components/Navigation/Navigation"
 import { Box, useMediaQuery } from "@mui/material"
 import { Menu as MenuIcon } from "@mui/icons-material"
 import { IconButton } from "@mui/material"
@@ -46,7 +47,7 @@ export default function ElevateAppBar({
                 <img src={NamucheLogo} alt="namuche-logo" />
               </Box>
 
-              {isNonMobile1000 && <MainMenu />}
+              {isNonMobile1000 && <Navigation />}
               {!isNonMobile1000 && (
                 <IconButton
                   aria-label="menu-button"
