@@ -8,7 +8,7 @@ import {
   useTheme,
 } from "@mui/material"
 import { ChevronRight } from "@mui/icons-material"
-import FlexBetween from "../../../components/HelpersComponents/Flex/FlexBetween"
+import { FlexBetween } from "../../../components/HelpersComponents/Flex/Flex"
 import MainMenu from "../MainMenu/MainMenu"
 // import SocialIconsGroup from "../../00Layout/SocialIcons/SocialIconsGroup"
 

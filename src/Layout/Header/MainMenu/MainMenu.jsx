@@ -1,5 +1,5 @@
 import React from "react"
-import FlexBetween from "../../../components/HelpersComponents/Flex/FlexBetween"
+import { FlexBetween } from "../../../components/HelpersComponents/Flex/Flex"
 import { Box, Typography, useTheme } from "@mui/material"
 import { useMediaQuery } from "@mui/material"
 

@@ -2,6 +2,7 @@ import * as React from "react"
 // Gatsby
 //material Ui
 import { CssBaseline, ThemeProvider } from "@mui/material"
+import { ThemeProvider as StyledThemeProvider } from "styled-components"
 import themeSettings from "../theme"
 // Components
 import Header from "./Header/Header"
@@ -14,9 +15,11 @@ const Layout = ({ children }) => {
     <>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Header />
-        {children}
-        <Footer />
+        <StyledThemeProvider theme={theme}>
+          <Header />
+          {children}
+          <Footer />
+        </StyledThemeProvider>
       </ThemeProvider>
     </>
   )

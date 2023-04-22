@@ -2,7 +2,7 @@ import * as React from "react"
 import AppBar from "@mui/material/AppBar"
 import Toolbar from "@mui/material/Toolbar"
 import useScrollTrigger from "@mui/material/useScrollTrigger"
-import WidthCenterContainer from "../../../components/HelpersComponents/Containers/WidthCenterContainer"
+import { WidthCenterContainer } from "../../../components/HelpersComponents/Containers/WidthCenterContainer"
 import MainMenu from "../MainMenu/MainMenu"
 import Navigation from "../../../components/Navigation/Navigation"
 import { Box, useMediaQuery } from "@mui/material"
@@ -32,6 +32,7 @@ export default function ElevateAppBar({
   isSidebarOpen,
   setIsSidebarOpen,
   isTopOfPage,
+  menu,
   props,
 }) {
   const isNonMobile1000 = useMediaQuery("(min-width: 1000px)")
@@ -47,7 +48,7 @@ export default function ElevateAppBar({
                 <img src={NamucheLogo} alt="namuche-logo" />
               </Box>
 
-              {isNonMobile1000 && <Navigation />}
+              {isNonMobile1000 && <Navigation menu={menu} />}
               {!isNonMobile1000 && (
                 <IconButton
                   aria-label="menu-button"

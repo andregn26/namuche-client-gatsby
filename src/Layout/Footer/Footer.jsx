@@ -1,7 +1,7 @@
 import React from "react"
-import WidthCenterContainer from "../../components/HelpersComponents/Containers/WidthCenterContainer"
+import { WidthCenterContainer } from "../../components/HelpersComponents/Containers/WidthCenterContainer"
 import { Box } from "@mui/material"
-import FlexBetween from "../../components/HelpersComponents/Flex/FlexBetween"
+import { FlexBetween } from "../../components/HelpersComponents/Flex/Flex"
 import SocialIconsGroup from "../SocialIcons/SocialIconsGroup"
 import Inovflow from "../../assets/img/inovflow.png"
 
