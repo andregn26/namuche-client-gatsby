@@ -11,6 +11,7 @@ import { IconButton } from "@mui/material"
 import NamucheLogo from "../../../assets/img/logo.png"
 import { useTheme } from "@mui/material"
 import { CssBaseline } from "@mui/material"
+import { Link } from "gatsby"
 
 function ElevationScroll(props) {
   const { children, window } = props
@@ -44,9 +45,11 @@ export default function ElevateAppBar({
         <AppBar>
           <WidthCenterContainer>
             <Toolbar disableGutters sx={{ justifyContent: "space-between" }}>
-              <Box sx={{ maxWidth: "7rem", margin: "2rem" }}>
-                <img src={NamucheLogo} alt="namuche-logo" />
-              </Box>
+              <Link to="/">
+                <Box sx={{ maxWidth: "7rem", margin: "2rem" }}>
+                  <img src={NamucheLogo} alt="namuche-logo" />
+                </Box>
+              </Link>
 
               {isNonMobile1000 && <Navigation menu={menu} />}
               {!isNonMobile1000 && (

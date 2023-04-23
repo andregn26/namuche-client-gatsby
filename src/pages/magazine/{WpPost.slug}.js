@@ -1,17 +1,16 @@
 import React from 'react'
-import Layout from '../../Layout/Layout'
 import BlogExcerpt from '../../components/Blog/BlogExcerpt/BlogExcerpt'
-import { graphql } from 'gatsby'
 
 
 
 const PageTemplate = () => {
   return (
-    <Layout>
-      <BlogExcerpt />
-    </Layout>
+
+    <h1>sfdgvsdf</h1>
+
   )
 }
+
 
 export default PageTemplate
 

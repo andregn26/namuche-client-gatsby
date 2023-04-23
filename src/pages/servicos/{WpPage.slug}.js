@@ -7,10 +7,12 @@ import { Box } from '@mui/material'
 
 const ServicePageTemplate = () => {
     return (
-        <Layout>
-            <Box mt={4}>Este é o template das várias páginas de serviços</Box>
-        </Layout>
+
+        <Box mt={4}>Este é o template das várias páginas de serviços</Box>
+
     )
 }
+
+ServicePageTemplate.Layout = Layout
 
 export default ServicePageTemplate
