@@ -1,5 +1,4 @@
 import React from 'react'
-import BlogExcerpt from '../../components/Blog/BlogExcerpt/BlogExcerpt'
 
 
 
