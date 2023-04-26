@@ -1,5 +1,5 @@
 import React from "react"
-import { Chip } from "@mui/material"
+import { Box, Chip, Grid } from "@mui/material"
 
 const PostCardCategories = ({ article }) => {
   const categoriesArray = article.node.categories.nodes
@@ -7,11 +7,30 @@ const PostCardCategories = ({ article }) => {
     "🚀 ~ file: PostCardCategories.jsx:7 ~ PostCardCategories ~ categoriesArray:",
     categoriesArray
   )
+
   return (
     <>
-      {categoriesArray.map((category, index) => (
-        <Chip key={index} color="success" label={category.name} />
-      ))}
+      <Grid container spacing={1} mb={3}>
+        {categoriesArray.map((category, index) => (
+          <Grid item key={index}>
+            <Chip
+              sx={{ cursor: "pointer" }}
+              component="a"
+              href={category.slug}
+              size="small"
+              variant="outlined"
+              key={index}
+              color={
+                (category.name === "web" && "info") ||
+                (category.name === "Branding" && "warning") ||
+                (category.name === "Estratégia de Marketing" && "primary") ||
+                "error"
+              }
+              label={category.name}
+            />
+          </Grid>
+        ))}
+      </Grid>
     </>
   )
 }

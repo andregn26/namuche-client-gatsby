@@ -7,7 +7,6 @@ import MainPostCard from "../MainPostExcerpt/MainPostCard"
 import PostCardMedia from "./Components/PostCardMedia"
 import PostCardContent from "./Components/PostCardContent"
 import PostCardActions from "./Components/PostCardActions"
-import PostCardCategories from "./Components/PostCardCategories"
 
 const PostExcerpt = () => {
   const {
@@ -32,7 +31,6 @@ const PostExcerpt = () => {
               >
                 <Box>
                   <PostCardMedia article={article} />
-                  <PostCardCategories article={article} />
                   <PostCardContent article={article} />
                 </Box>
                 <PostCardActions article={article} />

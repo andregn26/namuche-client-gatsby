@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 
 const PostCardActions = ({ article }) => {
   return (
-    <CardActions>
+    <CardActions sx={{ padding: "2rem 2rem" }}>
       <Link to={article.node.slug}>
         <Button size="small" color="primary">
           Ler Mais...

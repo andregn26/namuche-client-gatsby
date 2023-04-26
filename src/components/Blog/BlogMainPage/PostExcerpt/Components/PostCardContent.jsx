@@ -1,15 +1,23 @@
-import { CardContent, Typography } from "@mui/material"
+import { CardContent, Typography, useTheme } from "@mui/material"
 import React from "react"
+import PostCardCategories from "./PostCardCategories"
 
 const PostCardContent = ({ article }) => {
+  const theme = useTheme()
   const articleDataShortcut = article.node.acfBlogPosts
   return (
     <>
-      <CardContent sx={{ flex: 1 }}>
-        <Typography gutterBottom variant="h6" component="h2">
+      <CardContent sx={{ flex: 1, padding: "2rem 2rem" }}>
+        <PostCardCategories article={article} />
+        <Typography variant="h6" component="h2" fontFamily="Oswald">
           {articleDataShortcut.postTitle}
         </Typography>
-        <Typography gutterBottom variant="subtitle1">
+        <Typography
+          variant="body2"
+          my={1}
+          fontFamily="Oswald"
+          color={theme.palette.grey[600]}
+        >
           {article.node.date}
         </Typography>
         <Typography
@@ -22,23 +30,3 @@ const PostCardContent = ({ article }) => {
 }
 
 export default PostCardContent
-
-{
-  /* <CardContent sx={{ flex: 1 }}>
-<Typography gutterBottom variant="h6" component="h2">
-  {article.node.title}
-</Typography>
-<Typography gutterBottom variant="subtitle1">
-  {article.node.date}
-</Typography>
-<Typography
-  variant="body2"
-  dangerouslySetInnerHTML={{ __html: article.node.excerpt }}
-/>{" "}
-<CardActions>
-  <Button size="small" color="primary">
-    Ler Mais...
-  </Button>
-</CardActions>
-</CardContent> */
-}

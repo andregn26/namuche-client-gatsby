@@ -24,10 +24,8 @@ export const HeaderWrapper = styled.div`
 
 export const PostStyledGatsbyImg = styled(GatsbyImage)`
   height: 10rem;
-  display: none;
-  @media only screen and (min-width: 600px) {
-    display: block;
-  }
+  display: block;
+
   object-fit: cover;
   object-position: center;
 `

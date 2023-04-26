@@ -10,7 +10,7 @@ const MainPostCard = ({ articlesArray }) => {
         {articlesArray
           .filter((item, index) => index === 0)
           .map(mainArticle => (
-            <Grid item xs={12}>
+            <Grid key={mainArticle.node.id} item xs={12}>
               <Card
                 sx={{
                   display: "flex",

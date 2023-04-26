@@ -14,6 +14,7 @@ query allPostsQuery {
           nodes {
             name
             link
+            slug
           }
         }
         acfBlogPosts {
