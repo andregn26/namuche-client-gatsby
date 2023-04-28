@@ -1,6 +1,6 @@
 import React from "react"
 import { Box, Typography, useTheme } from "@mui/material"
-import { WidthCenterContainer } from "../../HelpersComponents/Containers/WidthCenterContainer"
+import { WidthCenterContainer } from "../HelpersComponents/Containers/WidthCenterContainer"
 import ImgHero from "./ImgHero"
 
 const Hero = () => {

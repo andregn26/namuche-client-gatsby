@@ -1,6 +1,6 @@
 import React from "react"
-import { PaddingContainer } from "../../HelpersComponents/Containers/PaddingContainer"
-import { WidthCenterContainer } from "../../HelpersComponents/Containers/WidthCenterContainer"
+import { PaddingContainer } from "../HelpersComponents/Containers/PaddingContainer"
+import { WidthCenterContainer } from "../HelpersComponents/Containers/WidthCenterContainer"
 import { Typography } from "@mui/material"
 import { useMediaQuery } from "@mui/material"
 

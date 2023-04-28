@@ -1,5 +1,4 @@
 import React from 'react'
-import Layout from '../Layout/Layout'
 import { Box } from '@mui/material'
 
 const Trabalhos = () => {
@@ -12,6 +11,6 @@ const Trabalhos = () => {
     )
 }
 
-Trabalhos.Layout = Layout
+
 
 export default Trabalhos

@@ -1,8 +1,5 @@
 import React from 'react'
-import Layout from '../../Layout/Layout'
 import { Box } from '@mui/material'
-
-
 
 
 const ServicePageTemplate = () => {
@@ -12,7 +9,5 @@ const ServicePageTemplate = () => {
 
     )
 }
-
-ServicePageTemplate.Layout = Layout
 
 export default ServicePageTemplate

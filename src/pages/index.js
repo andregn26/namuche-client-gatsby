@@ -1,10 +1,10 @@
 import * as React from 'react'
 //Components
 import Seo from '../components/Seo/Seo'
-import Hero from "../components/HomePage/Hero/Hero"
-import SecondSection from '../components/HomePage/Section2/SecondSection'
-import ThirdSection from '../components/HomePage/Section3/ThirdSection'
-import FourthSection from "../components/HomePage/Section4/FourthSection"
+import Hero from '../components/HomePage/Hero'
+import SecondSection from '../components/HomePage/SecondSection'
+import ThirdSection from '../components/HomePage/ThirdSection'
+import FourthSection from "../components/HomePage/FourthSection"
 
 
 const IndexPage = () => {

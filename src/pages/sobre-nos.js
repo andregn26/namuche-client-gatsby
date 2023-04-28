@@ -1,5 +1,4 @@
 import React from 'react'
-import Layout from '../Layout/Layout'
 import { Box } from '@mui/material'
 
 const SobreNos = () => {
@@ -11,6 +10,6 @@ const SobreNos = () => {
 
     )
 }
-SobreNos.Layout = Layout
+
 
 export default SobreNos

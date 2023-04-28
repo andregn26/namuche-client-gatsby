@@ -3,8 +3,7 @@ import AppBar from "@mui/material/AppBar"
 import Toolbar from "@mui/material/Toolbar"
 import useScrollTrigger from "@mui/material/useScrollTrigger"
 import { WidthCenterContainer } from "../../../components/HelpersComponents/Containers/WidthCenterContainer"
-import MainMenu from "../MainMenu/MainMenu"
-import Navigation from "../../../components/Navigation/Navigation"
+import Navigation from "../../Navigation/Navigation"
 import { Box, useMediaQuery } from "@mui/material"
 import { Menu as MenuIcon } from "@mui/icons-material"
 import { IconButton } from "@mui/material"
@@ -37,7 +36,6 @@ export default function ElevateAppBar({
   props,
 }) {
   const isNonMobile1000 = useMediaQuery("(min-width: 1000px)")
-  const theme = useTheme()
   return (
     <React.Fragment>
       <CssBaseline />

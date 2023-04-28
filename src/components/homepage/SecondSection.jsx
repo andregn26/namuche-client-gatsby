@@ -1,7 +1,6 @@
 import { Box, Typography } from "@mui/material"
 import React from "react"
-import { WidthCenterContainer } from "../../HelpersComponents/Containers/WidthCenterContainer"
-import { FlexBetween } from "../../HelpersComponents/Flex/Flex"
+import { WidthCenterContainer } from "../HelpersComponents/Containers/WidthCenterContainer"
 import { useMediaQuery } from "@mui/material"
 
 const SecondSection = () => {

@@ -1,7 +1,6 @@
 import React from "react"
-import { Paper, Box, Grid, Typography, Link, Card } from "@mui/material"
+import { Box, Grid, Card } from "@mui/material"
 // import { Link } from "gatsby"
-import PostCardMedia from "../PostExcerpt/Components/PostCardMedia"
 
 const MainPostCard = ({ articlesArray }) => {
   return (
