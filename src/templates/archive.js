@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { WidthCenterContainer } from "../components/HelpersComponents/Containers/WidthCenterContainer"
-import { Grid, Card, Box, Typography } from "@mui/material"
+import { Stack, Pagination, PaginationItem } from "@mui/material"
 import PostExcerpt from "../components/magazine/PostExcerpt"
 import { OuterGridPostExcerpt } from "../components/magazine/PostExcerpt.styles"
 import { CategoryMenu } from "../components/magazine/PostExcerpt.components"
@@ -9,8 +9,20 @@ import { CategoryMenu } from "../components/magazine/PostExcerpt.components"
 const archiveTemplate = ({
   data: {
     allWpPost: { edges: catPostArray },
+    wp: { readingSettings },
+    wpPage,
+  },
+  pageContext: {
+    catId,
+    catName,
+    catUri,
+    categories,
+    numPages,
+    currentPage,
+    catSlug,
   },
 }) => {
+  console.log(currentPage)
   return (
     <WidthCenterContainer style={{ marginTop: "3rem", marginBottom: "3rem" }}>
       <CategoryMenu />
@@ -30,11 +42,19 @@ const archiveTemplate = ({
 export default archiveTemplate
 
 export const pageQuery = graphql`
-  query ($catId: String!, $skip: Int!, $limit: Int!) {
+  query ($catId: String!) {
+    wp {
+      readingSettings {
+        postsPerPage
+        pageForPosts
+      }
+    }
+    wpPage(databaseId: { eq: 111334 }) {
+      slug
+      link
+    }
     allWpPost(
       filter: { categories: { nodes: { elemMatch: { id: { eq: $catId } } } } }
-      skip: $skip
-      limit: $limit
     ) {
       edges {
         node {

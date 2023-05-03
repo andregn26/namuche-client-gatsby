@@ -3,12 +3,12 @@ import { useState } from "react"
 import { Box, useMediaQuery } from "@mui/material"
 import Navbar from "./Navbar/Navbar"
 import Sidebar from "./Sidebar/Sidebar"
-import { useNavigationQuery } from "../../hooks/useNavigationQuery"
+import { useMainMenu } from "../../hooks/useNavigationHooks"
 
 const Header = () => {
   const isNonMobile = useMediaQuery("(min-width: 600px)")
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
-  const { wpMenu } = useNavigationQuery()
+  const { wpMenu } = useMainMenu()
   return (
     <Box display={isNonMobile ? null : "block"} width="100%" height="100%">
       <Sidebar

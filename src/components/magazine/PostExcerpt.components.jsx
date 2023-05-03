@@ -10,6 +10,10 @@ export const PostCardMedia = ({ image, id }) => (
 
 export const PostCardCategories = ({ article }) => {
   const categoriesArray = article.node.categories.nodes
+  console.log(
+    "🚀 ~ file: PostExcerpt.components.jsx:13 ~ PostCardCategories ~ categoriesArray:",
+    categoriesArray
+  )
 
   return (
     <>
@@ -19,7 +23,7 @@ export const PostCardCategories = ({ article }) => {
             <Chip
               sx={{ cursor: "pointer" }}
               component="a"
-              href={category.slug}
+              href={category.link}
               size="small"
               variant="outlined"
               key={index}
@@ -59,7 +63,9 @@ export const CategoryMenu = () => {
       {categoriesArray
         .filter(category => category.count !== null)
         .map(category => (
-          <Typography key={category.id}>{category.name}</Typography>
+          <Typography key={category.id}>
+            {category.name} ({category.count})
+          </Typography>
         ))}
     </Box>
   )
