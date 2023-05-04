@@ -10,6 +10,7 @@ export const useCategoryMenu = () => {
           description
           name
           slug
+          link
         }
       }
     }

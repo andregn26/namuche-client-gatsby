@@ -1,6 +1,17 @@
 import React from "react"
 import { PostStyledGatsbyImg } from "../HelpersComponents/Wrappers/Wrappers"
-import { Chip, Grid, CardActions, Button, Box, Typography } from "@mui/material"
+import {
+  Chip,
+  Grid,
+  CardActions,
+  ButtonGroup,
+  Button,
+  Box,
+  Card,
+  Typography,
+  useTheme,
+  useMediaQuery,
+} from "@mui/material"
 import { Link } from "gatsby"
 import { useCategoryMenu } from "../../hooks/useBlogHooks"
 
@@ -10,11 +21,6 @@ export const PostCardMedia = ({ image, id }) => (
 
 export const PostCardCategories = ({ article }) => {
   const categoriesArray = article.node.categories.nodes
-  console.log(
-    "🚀 ~ file: PostExcerpt.components.jsx:13 ~ PostCardCategories ~ categoriesArray:",
-    categoriesArray
-  )
-
   return (
     <>
       <Grid container spacing={1} mb={3}>
@@ -23,7 +29,7 @@ export const PostCardCategories = ({ article }) => {
             <Chip
               sx={{ cursor: "pointer" }}
               component="a"
-              href={category.link}
+              href={`categoria/${category.slug}`}
               size="small"
               variant="outlined"
               key={index}
@@ -45,7 +51,7 @@ export const PostCardCategories = ({ article }) => {
 export const PostCardActions = ({ article }) => {
   return (
     <CardActions sx={{ padding: "2rem 2rem" }}>
-      <Link to={article.node.slug}>
+      <Link to={`/magazine/artigo/${article.node.slug}`}>
         <Button size="small" color="primary">
           Ler Mais...
         </Button>
@@ -58,15 +64,35 @@ export const CategoryMenu = () => {
   const {
     allWpCategory: { nodes: categoriesArray },
   } = useCategoryMenu()
+  const theme = useTheme()
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"))
+  const isTablet = useMediaQuery(theme.breakpoints.between("sm", "md"))
+  const isMaxTablet = useMediaQuery(theme.breakpoints.down("md"))
+  const isLaptop = useMediaQuery(theme.breakpoints.between("md", "lg"))
+  const isDesktop = useMediaQuery(theme.breakpoints.between("lg", "xl"))
+  const isLargeDesktop = useMediaQuery(theme.breakpoints.up("xl"))
   return (
-    <Box sx={{ mb: "2rem" }}>
-      {categoriesArray
-        .filter(category => category.count !== null)
-        .map(category => (
-          <Typography key={category.id}>
-            {category.name} ({category.count})
-          </Typography>
-        ))}
-    </Box>
+    <>
+      <Box sx={{ display: "flex", justifyContent: "center", my: "2rem" }}>
+        <ButtonGroup
+          size="small"
+          variant={isMobile ? "outlined" : "text"}
+          aria-label="text button group"
+          orientation={isMobile ? "vertical" : "horizontal"}
+          color="primary"
+        >
+          {categoriesArray
+            .filter(category => category.count !== null)
+            .map(category => (
+              <Button
+                href={`/magazine/categoria/${category.slug}`}
+                key={category.id}
+              >
+                {category.name} ({category.count})
+              </Button>
+            ))}
+        </ButtonGroup>
+      </Box>
+    </>
   )
 }

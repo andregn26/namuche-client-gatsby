@@ -6,7 +6,7 @@ import PostExcerpt from "../components/magazine/PostExcerpt"
 import { OuterGridPostExcerpt } from "../components/magazine/PostExcerpt.styles"
 import { CategoryMenu } from "../components/magazine/PostExcerpt.components"
 
-const archiveTemplate = ({
+const magazineCategoryPagesTemplate = ({
   data: {
     allWpPost: { edges: catPostArray },
     wp: { readingSettings },
@@ -39,7 +39,7 @@ const archiveTemplate = ({
   )
 }
 
-export default archiveTemplate
+export default magazineCategoryPagesTemplate
 
 export const pageQuery = graphql`
   query ($catId: String!) {

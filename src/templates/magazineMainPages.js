@@ -5,8 +5,9 @@ import { WidthCenterContainer } from "../components/HelpersComponents/Containers
 import MainPostCard from "../components/magazine/MainPostCard"
 import { OuterGridPostExcerpt } from "../components/magazine/PostExcerpt.styles"
 import { CategoryMenu } from "../components/magazine/PostExcerpt.components"
+import { Box, ButtonGroup, Button } from "@mui/material"
 
-const magazineTemplate = ({
+const magazineMainPagesTemplate = ({
   data: {
     allWpPost: { edges: articlesArray },
   },
@@ -22,32 +23,45 @@ const magazineTemplate = ({
   const nextPage = `/magazine/${(currentPage + 1).toString()}`
   return (
     <WidthCenterContainer style={{ marginTop: "3rem" }}>
-      <MainPostCard articlesArray={articlesArray} />
-      <CategoryMenu />
-      <OuterGridPostExcerpt>
-        <PostExcerpt
-          articlesArray={articlesArray}
-          isRender={true}
-          width={6}
-          minHeight="35rem"
-          numOfIndex={1}
-        />
-        {!isFirst && (
-          <Link to={prevPage} rel="prev">
-            ← Previous Page
-          </Link>
-        )}
-        {!isLast && (
-          <Link to={nextPage} rel="next">
-            Next Page →
-          </Link>
-        )}
-      </OuterGridPostExcerpt>
+      <Box sx={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
+        <MainPostCard articlesArray={articlesArray} />
+        <CategoryMenu />
+        <OuterGridPostExcerpt>
+          <PostExcerpt
+            articlesArray={articlesArray}
+            isRender={true}
+            width={6}
+            minHeight="33rem"
+            numOfIndex={1}
+          />
+        </OuterGridPostExcerpt>
+        <ButtonGroup
+          variant="contained"
+          aria-label="outlined primary button group"
+        >
+          <Button
+            sx={{ flexGrow: "1" }}
+            disabled={isFirst ? true : false}
+            LinkComponent={Link}
+            to={prevPage}
+          >
+            Página Anterior
+          </Button>
+          <Button
+            sx={{ flexGrow: "1" }}
+            disabled={isLast ? true : false}
+            LinkComponent={Link}
+            to={nextPage}
+          >
+            Página Seguinte
+          </Button>
+        </ButtonGroup>
+      </Box>
     </WidthCenterContainer>
   )
 }
 
-export default magazineTemplate
+export default magazineMainPagesTemplate
 
 export const allPostsQuery = graphql`
   query ($skip: Int!, $limit: Int!) {

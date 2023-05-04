@@ -5,7 +5,7 @@ import { Box, Grid, Card } from "@mui/material"
 const MainPostCard = ({ articlesArray }) => {
   return (
     <>
-      <Grid container spacing={6} mb={6}>
+      <Grid container spacing={6}>
         {articlesArray
           .filter((item, index) => index === 0)
           .map(mainArticle => (

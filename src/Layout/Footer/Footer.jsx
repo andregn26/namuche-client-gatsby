@@ -1,13 +1,14 @@
 import React from "react"
 import { WidthCenterContainer } from "../../components/HelpersComponents/Containers/WidthCenterContainer"
-import { Box } from "@mui/material"
+import { Box, useTheme } from "@mui/material"
 import { FlexBetween } from "../../components/HelpersComponents/Flex/Flex"
 import SocialIconsGroup from "../SocialIcons/SocialIconsGroup"
 import Inovflow from "../../assets/img/inovflow.png"
 
 const Footer = () => {
+  const theme = useTheme()
   return (
-    <Box padding={"1rem 0"}>
+    <Box padding={"6rem 0 2rem 0"}>
       <WidthCenterContainer>
         <FlexBetween>
           <Box sx={{ maxWidth: "6rem" }}>
